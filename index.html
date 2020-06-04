@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3-realize</title>
+    <style type="text/css">
+        #frame{
+            position: absolute;
+            width: 520px;
+            height: 280px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        #tag{
+            position: absolute;
+            left:-50px ;
+            top: -10px;
+            opacity: .5;
+        }
+        #tag li{
+            display: inline-block;
+            width: 200px;
+            height: 20px;
+            margin: 0 160px;
+            text-align: center;
+            color: #fff;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        #photos img{
+            float:left;
+            width: 520px;
+            height: 280px;
+        }
+
+        #photos{
+            position: absolute;
+            width: calc(520px*3);
+        }
+        .play{
+            animation: ma 3s ease-out infinite alternate;
+        }
+        @keyframes ma{
+            0%,20%{
+               margin-left: 0px; 
+            }
+            30%,70%{
+                margin-left: -520px;
+            }
+            80%,100%{
+                margin-left: -1040px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="frame">
+        <div id="photos" class="play">
+            <img src="./assets/1.jpg" alt="">
+            <img src="./assets/2.webp" alt="">
+            <img src="./assets/3.jpg" alt="">
+            <ul id="tag">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
